@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABM de Personas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>ABM de Personas</h1>
+
+  <!-- FORMULARIO LISTA -->
+  <section id="formLista">
+    <table id="tablaPersonas" border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Fecha Nac.</th>
+          <th>DNI</th>
+          <th>País Origen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbodyPersonas"></tbody>
+    </table>
+    <button id="btnAgregar">Agregar Elemento</button>
+  </section>
+
+  <!-- FORMULARIO ABM -->
+  <section id="formAbm" style="display:none;">
+    <h2 id="tituloAbm">Formulario ABM</h2>
+    <form id="formulario">
+      <label>ID: <input type="text" id="txtId" disabled></label><br>
+      <label>Nombre: <input type="text" id="txtNombre" required></label><br>
+      <label>Apellido: <input type="text" id="txtApellido" required></label><br>
+      <label>Fecha Nac.: <input type="date" id="txtFechaNacimiento" required></label><br>
+      <label>Tipo:
+        <select id="selTipo">
+          <option value="ciudadano">Ciudadano</option>
+          <option value="extranjero">Extranjero</option>
+        </select>
+      </label><br>
+      <label>DNI: <input type="number" id="txtDni" min="1"></label><br>
+      <label>País Origen: <input type="text" id="txtPaisOrigen"></label><br>
+
+      <button type="button" id="btnAceptar">Aceptar</button>
+      <button type="button" id="btnCancelar">Cancelar</button>
+    </form>
+  </section>
+
+  <!-- SPINNER -->
+  <div id="spinner" style="display:none;">Cargando...</div>
+
+  <script src="persona.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
